@@ -1,29 +1,19 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Global Weather App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>World Weather Map</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f2f2f2;
-      text-align: center;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 600px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🌍 Live Global Weather</h1>
-  <p>Check the live weather around the world</p>
+  <div class="container">
+    <h1>🌍 Weather Finder</h1>
+    <input type="text" id="cityInput" placeholder="Enter a city name..." />
+    <button onclick="getWeather()">Search</button>
+    <div id="weatherInfo" class="card"></div>
+  </div>
 
-  <!-- Weather Widget from Windy -->
-  <iframe src="https://embed.windy.com/embed2.html?lat=20&lon=0&detailLat=20&detailLon=0&width=100%25&height=600&zoom=2&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1" width="650" height="600"></iframe>
-
+  <script src="script.js"></script>
 </body>
 </html>
